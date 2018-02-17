@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+    image: web
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      - NODE_ENV=dev
+      - MONGODB_CONNECTION_STRING=mongodb://mongo/db
+    depends_on: &depends_on
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo:3
+    ports:
+      - "27017:27017"
