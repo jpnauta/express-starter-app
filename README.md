@@ -39,7 +39,7 @@ locally.
 
 You will need to make sure these dependencies are installed.
 
-- [Node.js > 6][nodejs]
+- [Node.js > 8][nodejs]
 - [NPM][npm]
 - [MongoDB][mongodb] (optional)
 
